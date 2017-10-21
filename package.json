@@ -1,0 +1,13 @@
+{
+  "name": "jquery-text-editor",
+  "version": "0.0.1",
+  "description": "Simple text editor on pure JQuery.",
+  "main": "src/index.html",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 src"
+  }
+}
