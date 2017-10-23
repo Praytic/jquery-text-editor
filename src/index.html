@@ -9,10 +9,26 @@
 </head>
 <body>
 <div id="lol">
-    <ul class="menu">
-        <li><a href="#" data-command="file">File</a></li>
-        <li><a href="#" data-command="edit">Edit</a></li>
-    </ul>
+
+    <div class="menu">
+        <div class="menu-option" tabindex="1">File</div>
+        <div class="menu-suboptions">
+            <ul>
+                <li><i class='fa fa-undo'></i>Undo</li>
+                <li><i class='fa fa-repeat'></i>Redo</li>
+                <hr/>
+                <li>Cut</li>
+                <li>Copy</li>
+                <li>Paste</li>
+                <li>Paste as text</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<ul class="menu">-->
+        <!--<li><a href="#" data-command="file">File</a></li>-->
+        <!--<li><a href="#" data-command="edit">Edit</a></li>-->
+    <!--</ul>​-->
 
     <div class="toolbar">
         <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
