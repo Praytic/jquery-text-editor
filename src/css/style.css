@@ -62,65 +62,53 @@ a[data-command='insertimage'] {
     background-color: #f2f2f2;
 }
 
-/*ul.menu {*/
-    /*min-height: 32px;*/
-    /*list-style-type: none;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*overflow: hidden;*/
-/*}*/
+/*-------------------------------*/
 
-/*ul.menu li {*/
-    /*float: left;*/
-/*}*/
-
-/*ul.menu li a {*/
-    /*display: block;*/
-    /*text-align: center;*/
-    /*padding: 5px 16px;*/
-    /*text-decoration: none;*/
-/*}*/
-
-/*------------------------*/
-
-.menu {
-    min-height: 32px;
-}
-.menu-option {
-    text-align: center;
-    width: 100px;
+ul.menu {
+    height: 40px;
+    line-height: 40px;
     position: relative;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1.2em;
-    margin: 5px;
-    outline: none;
-}
-.menu-option:focus + .menu-suboptions {
-    display: block;
-}
-.menu-suboptions {
-    display: none;
-}
-.menu-suboptions ul {
+    text-align: center;
+    margin: auto;
+    padding: auto;
     list-style-type: none;
-    background: white;
-    border: 1px solid #ddd;
-    position: absolute;
-    top: 12px;
-    padding: 0;
 }
-.menu-suboptions ul li {
-    padding: 10px;
-    cursor: pointer;
-    width: 200px;
+ul.menu > li {
+    float: left;
+    width: auto;
 }
-.menu-suboptions ul li:first-child {
-    border-top: none;
+ul.menu > li a {
+    display: block;
+    width: auto;
+    text-decoration: none;
 }
-.menu-suboptions ul li:last-child {
-    border-bottom: none;
-}
-.menu-suboptions ul li:hover {
+ul.menu li:hover {
     background-color: #f2f2f2;
+    transition-property: background-color;
+    transition-duration: 0.33s;
+}
+ul.menu li:hover ul {
+    visibility: visible;
+    transition-duration: 0.33s;
+    border: 1px solid black;
+}
+
+ul.sub-menu {
+    text-align: left;
+    padding: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    line-height: 28px;
+    background-color: #fff;
+    list-style-type: none;
+}
+ul.sub-menu > li {
+    width: 120px;
+}
+ul.menu a,
+ul.sub-menu a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    padding: 0 10px;
 }

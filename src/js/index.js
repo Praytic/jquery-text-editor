@@ -5,7 +5,3 @@ $('.toolbar a').click(function(e) {
     document.execCommand($(this).data('command'), false, url);
   } else document.execCommand($(this).data('command'), false, null);
 });
-
-$('.menu-option h1').click(function(e) {
-
-});

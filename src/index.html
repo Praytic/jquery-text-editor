@@ -10,25 +10,30 @@
 <body>
 <div id="lol">
 
-    <div class="menu">
-        <div class="menu-option" tabindex="1">File</div>
-        <div class="menu-suboptions">
-            <ul>
-                <li><i class='fa fa-undo'></i>Undo</li>
-                <li><i class='fa fa-repeat'></i>Redo</li>
-                <hr/>
-                <li>Cut</li>
-                <li>Copy</li>
-                <li>Paste</li>
-                <li>Paste as text</li>
-            </ul>
-        </div>
-    </div>
-
-    <!--<ul class="menu">-->
-        <!--<li><a href="#" data-command="file">File</a></li>-->
-        <!--<li><a href="#" data-command="edit">Edit</a></li>-->
-    <!--</ul>​-->
+    <nav>
+        <ul class="menu">
+            <li>
+                <a href="#">File</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Import</a></li>
+                    <li><a href="#">Export</a></li>
+                    <li><a href="#">Print</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Edit</a>
+                <ul class="sub-menu">
+                    <li><a href="#">Undo</a></li>
+                    <li><a href="#">Redo</a></li>
+                    <li><a href="#">Cut</a></li>
+                    <li><a href="#">Copy</a></li>
+                    <hr/>
+                    <li><a href="#">Paste</a></li>
+                    <li><a href="#">Paste as text</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
     <div class="toolbar">
         <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
