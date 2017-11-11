@@ -2,9 +2,9 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>jQuery contentEditable WYSIWYG Editor</title>
-    <link rel='stylesheet prefetch'
-          href='https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css'>
+    <title>My editor</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-lightness/jquery-ui.css" />
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css'>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -25,29 +25,37 @@
                 <ul class="sub-menu">
                     <li><a href="#">Undo</a></li>
                     <li><a href="#">Redo</a></li>
+                    <hr/>
                     <li><a href="#">Cut</a></li>
                     <li><a href="#">Copy</a></li>
-                    <hr/>
                     <li><a href="#">Paste</a></li>
                     <li><a href="#">Paste as text</a></li>
                 </ul>
             </li>
         </ul>
+        <ul class="menu toolbar">
+            <li><a href="#" data-command='undo'><i class='fa fa-undo'></i></a></li>
+            <li><a href="#" data-command='redo'><i class='fa fa-repeat'></i></a></li>
+            <li><a href="#" data-command='bold'><i class='fa fa-bold'></i></a></li>
+            <li><a href="#" data-command='italic'><i class='fa fa-italic'></i></a></li>
+            <li><a href="#" data-command='underline'><i class='fa fa-underline'></i></a></li>
+            <li><a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a></li>
+            <li><a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a></li>
+            <li><a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a></li>
+            <li><a href="#" data-command='insertimage'><i class='fa fa-image'></i></a></li>
+            <li>
+                <a href="#" data-command="insertTable"><i class="fa fa-table"></i></a>
+                <ul class="sub-menu">
+                    <li><label for="rows-number">Rows</label><input title="Rows number" id="rows-number"></li>
+                    <li><label for="cols-number">Columns</label><input title="Columns number" id="cols-number"></li>
+                    <li><a href="#" data-command="insertTable">Apply</a></li>
+                </ul>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
     </nav>
 
-    <div class="toolbar">
-        <a href="#" data-command='undo'><i class='fa fa-undo'></i></a>
-        <a href="#" data-command='redo'><i class='fa fa-repeat'></i></a>
-        <a href="#" data-command='bold'><i class='fa fa-bold'></i></a>
-        <a href="#" data-command='italic'><i class='fa fa-italic'></i></a>
-        <a href="#" data-command='underline'><i class='fa fa-underline'></i></a>
-        <a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a>
-        <a href="#" data-command='justifyCenter'><i
-                class='fa fa-align-center'></i></a>
-        <a href="#" data-command='justifyRight'><i
-                class='fa fa-align-right'></i></a>
-        <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
-    </div>
     <div id='editor' contenteditable>
         <p>Try making some changes here. Add your own text or maybe an
             image.</p>

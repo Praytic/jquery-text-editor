@@ -4,6 +4,18 @@ body {
     height: 100%;
 }
 
+input {
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    height: 20px;
+}
+
+input:focus {
+    outline: 0;
+}
+
 a {
     cursor: pointer;
 }
@@ -37,10 +49,6 @@ a {
     margin: 0 -2px;
     display: inline-block;
     text-decoration: none;
-}
-
-.toolbar a:hover {
-    background: #f8f8f8;
 }
 
 a[data-command='redo'],
@@ -82,18 +90,17 @@ ul.menu > li a {
     width: auto;
     text-decoration: none;
 }
-ul.menu li:hover {
-    background-color: #f2f2f2;
+ul.menu a:hover {
+    background-color: #f8f8f8;
     transition-property: background-color;
-    transition-duration: 0.33s;
 }
 ul.menu li:hover ul {
     visibility: visible;
-    transition-duration: 0.33s;
     border: 1px solid black;
 }
 
 ul.sub-menu {
+    z-index: 1;
     text-align: left;
     padding: 0;
     visibility: hidden;
@@ -106,9 +113,36 @@ ul.sub-menu {
 ul.sub-menu > li {
     width: 120px;
 }
+ul.sub-menu > li > input {
+    width: 120px;
+}
 ul.menu a,
 ul.sub-menu a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     padding: 0 10px;
+}
+
+/*---------------------------*/
+
+.custom-table {
+    border: solid 1px #f2f2f2;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.custom-table thead th {
+    min-width: 50px;
+    background-color: #f2f2f2;
+    border: solid 1px #f2f2f2;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.custom-table tbody td {
+    min-width: 50px;
+    border: solid 1px #f2f2f2;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
 }
