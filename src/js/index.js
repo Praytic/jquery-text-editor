@@ -1,12 +1,18 @@
 (function ($) {
   $('a[data-command]').click(function (e) {
+    var editor = $('#editor');
+    setTimeout(function() {
+      editor.focus();
+    }, 0);
     var command = $(this).data('command');
-    if (command === 'insertimageLocal') {
+    if (command === 'insertimageFile') {
       $('input[type=file]').click();
     }
     else if (command === 'insertimage') {
       url = prompt('Enter the link here: ', '');
-      document.execCommand(command, false, url);
+      if (url) {
+        document.execCommand(command, false, url);
+      }
     }
     else if (command === 'insertTable') {
       document.execCommand("insertHTML", false, createTable());
@@ -18,7 +24,7 @@
 
   $("input[type=file]").change(function () {
     var inp = $("input[type=file]");
-    if (this.val() === "") {
+    if (inp.val() === "") {
       return;
     }
     inp.val("");

@@ -61,12 +61,9 @@ a[data-command='underline'] {
     margin-right: 5px;
 }
 
-a[data-command='undo'],
-a[data-command='redo'],
 a[data-command='justifyRight'],
 a[data-command='justifyCenter'],
-a[data-command='justifyLeft'],
-a[data-command='insertimage'] {
+a[data-command='justifyLeft'] {
     background-color: #f2f2f2;
 }
 
@@ -92,7 +89,6 @@ ul.menu > li a {
 }
 ul.menu a:hover {
     background-color: #f8f8f8;
-    transition-property: background-color;
 }
 ul.menu li:hover ul {
     visibility: visible;

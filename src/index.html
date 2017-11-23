@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="lol">
-    <input type="file" onchange="previewFile()" style="position:absolute;top:-100px"><br>
+    <input type="file" onchange="previewFile()" style="display: none"><br>
     <img src="" height="200" style="display: none" alt="Image preview...">
     <nav>
         <ul class="menu">
@@ -35,7 +35,6 @@
             </li>
         </ul>
         <ul class="menu toolbar">
-            <li><a href="#" data-command='insertimageLocal'><i class='fa fa-image'></i></a></li>
             <li><a href="#" data-command='undo'><i class='fa fa-undo'></i></a></li>
             <li><a href="#" data-command='redo'><i class='fa fa-repeat'></i></a></li>
             <li><a href="#" data-command='bold'><i class='fa fa-bold'></i></a></li>
@@ -44,7 +43,13 @@
             <li><a href="#" data-command='justifyLeft'><i class='fa fa-align-left'></i></a></li>
             <li><a href="#" data-command='justifyCenter'><i class='fa fa-align-center'></i></a></li>
             <li><a href="#" data-command='justifyRight'><i class='fa fa-align-right'></i></a></li>
-            <li><a href="#" data-command='insertimage'><i class='fa fa-image'></i></a></li>
+            <li>
+                <a href="#" data-command='insertimage'><i class='fa fa-image'></i></a>
+                <ul class="sub-menu">
+                    <li><a href="#" data-command='insertimageFile'>From File</a></li>
+                    <li><a href="#" data-command='insertimage'>By URL</a></li>
+                </ul>
+            </li>
             <li>
                 <a href="#" data-command="insertTable"><i class="fa fa-table"></i></a>
                 <ul class="sub-menu">
