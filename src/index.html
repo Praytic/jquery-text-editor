@@ -9,12 +9,13 @@
 </head>
 <body>
 <div id="lol">
-
+    <input type="file" onchange="previewFile()" style="position:absolute;top:-100px"><br>
+    <img src="" height="200" style="display: none" alt="Image preview...">
     <nav>
         <ul class="menu">
             <li>
                 <a href="#">File</a>
-                <ul class="sub-menu">
+                <ul id="file-sub-menu" class="sub-menu">
                     <li><a href="#">Import</a></li>
                     <li><a href="#">Export</a></li>
                     <li><a href="#">Print</a></li>
@@ -22,18 +23,19 @@
             </li>
             <li>
                 <a href="#">Edit</a>
-                <ul class="sub-menu">
-                    <li><a href="#">Undo</a></li>
-                    <li><a href="#">Redo</a></li>
+                <ul id="edit-sub-menu" class="sub-menu">
+                    <li><a href="#" data-command='undo'>Undo</a></li>
+                    <li><a href="#" data-command='redo'>Redo</a></li>
                     <hr/>
-                    <li><a href="#">Cut</a></li>
-                    <li><a href="#">Copy</a></li>
-                    <li><a href="#">Paste</a></li>
-                    <li><a href="#">Paste as text</a></li>
+                    <li><a href="#" data-command='cut'>Cut</a></li>
+                    <li><a href="#" data-command='copy'>Copy</a></li>
+                    <li><a href="#" data-command='paste'>Paste</a></li>
+                    <li><a href="#" data-command='pastePlainText'>Paste as text</a></li>
                 </ul>
             </li>
         </ul>
         <ul class="menu toolbar">
+            <li><a href="#" data-command='insertimageLocal'><i class='fa fa-image'></i></a></li>
             <li><a href="#" data-command='undo'><i class='fa fa-undo'></i></a></li>
             <li><a href="#" data-command='redo'><i class='fa fa-repeat'></i></a></li>
             <li><a href="#" data-command='bold'><i class='fa fa-bold'></i></a></li>
@@ -51,8 +53,6 @@
                     <li><a href="#" data-command="insertTable">Apply</a></li>
                 </ul>
             </li>
-            <li></li>
-            <li></li>
         </ul>
     </nav>
 
