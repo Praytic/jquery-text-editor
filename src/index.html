@@ -9,16 +9,18 @@
 </head>
 <body>
 <div id="lol">
-    <input type="file" onchange="previewFile()" style="display: none"><br>
+    <input id="image-loader" type="file" onchange="previewFile()" style="display: none"><br>
+    <input id="content-loader" type="file" onchange="importJson()" style="display: none"><br>
     <img src="" height="200" style="display: none" alt="Image preview...">
     <nav>
         <ul class="menu">
             <li>
                 <a href="#">File</a>
                 <ul id="file-sub-menu" class="sub-menu">
-                    <li><a href="#">Import</a></li>
-                    <li><a href="#">Export</a></li>
+                    <li><a href="#" data-command="importall">Import</a></li>
+                    <li><a href="#" data-command="exportall">Export</a></li>
                     <li><a href="#" data-command="print">Print</a></li>
+                    <li><a href="#" data-command="custom">Create Actions</a></li>
                 </ul>
             </li>
             <li>
